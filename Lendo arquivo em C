@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(){
+
+    FILE *arq;
+    arq = fopen("C:\\Users\\l.matos\\Documents\\Texto\\arq.txt", "r");
+
+    if(arq == NULL){
+       printf("Erro!\n");
+       exit (0);
+    }
+
+    char texto [1000]="";
+
+    while(fgets(texto, 1000, arq) != NULL)
+         printf("%s", texto);
+
+         fclose(arq);
+
+         return (0);
+
+}
