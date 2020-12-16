@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(){
+
+   char nome [10]="";
+   char senha_s [10]="";
+   int senha;
+
+   printf("NOME:");
+   scanf("%s", &nome);
+
+   printf("SENHA:");
+   scanf("%i", &senha);
+
+   itoa(senha, senha_s, 10); //conversao de inteiro para strings
+
+   int tamanho=strlen(nome); //tamanho da string
+
+
+       printf("Tamanho %i\n", tamanho);
+       printf("%s %s ", nome, senha_s);
+
+}
