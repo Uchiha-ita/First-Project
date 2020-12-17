@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main(){
+
+  char mensagem[100]={'a','b','c','d','e','f','g','h','i','j','k','k','l','n','m','o','p','q','r','s','t','u','v','x','w','y','z'};
+  char x, y;
+  long i, rot;
+
+        printf("Digite uma mensagem");
+        scanf("%s", &mensagem);
+
+        printf("\n\nQuantidade de rotacoes");
+        scanf("%ld", &rot);
+
+ //-----------------------------------Encriptar------------------------------
+
+         for(i = 0; mensagem[i] != '\0'; i++){
+            x = mensagem[i];
+            if(x >= 'a' && x <= 'z'){
+                x = x + rot;
+                if(x > 'z')
+                {x = x - 'z' + 'a' -1;}
+                mensagem[i] = x; }}
+
+        printf("\n\nMensagem Criptografada %s\n", mensagem);
+
+
+//-----------------------------------Descriptografada------------------------------
+
+           for(i = 0; mensagem[i] != '\0'; i++)
+              {x = mensagem[i];
+              if(x >= 'a' && x <= 'z')
+              {  x = x - rot;
+                  if(x < 'a')
+                  {x = x + 'z' - 'a' + 1;}
+                  mensagem[i] = x;}
+                       mensagem[i] = x;}
+                  printf("\n\nMensagem Descriptografada %s", mensagem);
+                  return(0);
+                  }
